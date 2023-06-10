@@ -1,0 +1,178 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.category_item_main_div
+{
+    width: 100%;
+}
+
+.category_first_poster_div
+{
+    height: 100vh;
+    position: relative;
+}
+
+.category_gradient_layer
+{
+    z-index: 0;
+    background-color: rgba(3, 3, 3, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.category_second_video_div
+{
+    margin: 80px 0;
+    height: 70vh;
+}
+
+
+
+ /* ================================================== */
+ /* ================================================== */
+
+.Aquatics_details_div, .Indoor_details_div, .Athletics_details_div, .Outdoor_details_div, .Beach_details_div
+{
+    position: absolute;
+    top: 175px;
+    left: 50px;
+}
+
+.Aquatics_details_div p, .Indoor_details_div p ,.Athletics_details_div p, .Outdoor_details_div p, .Beach_details_div p  
+{
+    font-size: 5.5rem;
+   font-weight: 600;
+   color: #ffffff;
+   font-family: 'Calibri';
+}
+
+.Aquatics_details_div h4, .Indoor_details_div h4, .Athletics_details_div h4, .Outdoor_details_div h4, .Beach_details_div h4
+{
+   font-size: 1.9rem;
+   font-weight: 100;
+   letter-spacing: 28px;
+   color: #ffffff;
+   font-family: 'Calibri';
+}
+
+.Aquatics_details_div h6, .Indoor_details_div h6,.Athletics_details_div h6, .Outdoor_details_div h6, .Beach_details_div h6
+{
+    font-size: 1rem;
+   font-weight: 300;
+   color: #ffffff;
+   font-family: 'Calibri';
+   text-align: left;
+   width: 700px;
+   line-height: 24px;
+   margin-top: 80px;
+}
+
+.Aquatics_video_title, .Indoor_video_title, .Athletics_video_title, .Outdoor_video_title, .Beach_video_title
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.Aquatics_video_title p, .Indoor_video_title p, .Athletics_video_title p, .Outdoor_video_title p, .Beach_video_title p
+{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #4B4B4B;
+}
+
+.video_Aquatics_div, .video_Indoor_div, .video_Athletics_div, .video_Outdoor_div, .video_Beach_div
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    height: 254px;
+}
+
+
+
+
+/* -------------------------------------------------- */
+/* --------------Aquatics category------------------- */
+/* -------------------------------------------------- */
+.Aquatics_image_layer
+{
+    background-image: url(../media/male-swimmer-swimming-butterfly-stroke.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+
+
+/* -------------------------------------------------- */
+/* --------------Indoor category------------------- */
+/* -------------------------------------------------- */
+
+.Indoor_image_layer
+{
+    background-image: url(../media/basketball-players-big-professional-arena-during-game.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+/* -------------------------------------------------- */
+/* --------------Athletics category------------------- */
+/* -------------------------------------------------- */
+
+.Athletics_image_layer
+{
+    background-image: url(../media/athlete-starting-line-stadium.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+/* -------------------------------------------------- */
+/* --------------Outdoor category------------------- */
+/* -------------------------------------------------- */
+
+.Outdoor_image_layer
+{
+    background-image: url(../media/side-view-man-playing-golf-field-with-club.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+/* -------------------------------------------------- */
+/* --------------Beach category------------------- */
+/* -------------------------------------------------- */
+
+.Beach_image_layer
+{
+    background-image: url(../media/beach-volleyball.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+

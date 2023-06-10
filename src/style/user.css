@@ -1,0 +1,137 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.user_details_main
+{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.user_title_container
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50px;
+    width: 100%;   
+}
+
+.user_title_container p 
+{
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Calibri';
+    margin: 20px 0;
+}
+
+.sub_section
+{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    color: #aaaaaae5;
+    width: 100%;
+}
+
+.user_section
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    border-right: 1px solid #aaaaaa94;
+}
+
+.user_details_container
+{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+    margin: 50px 100px;
+}
+
+.user
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 600px;
+    gap: 20px;
+}
+.user h5{
+    font-size: 1rem;
+    color: #aaaaaa83;
+    width: 80px;
+}
+.user h6
+{
+    display: flex;
+    align-items: flex-start;
+    width: 200px;
+    font-size: 1.2rem;
+    color: rgb(122, 122, 122);
+    font-family: 'Calibri';
+}
+
+.user p 
+{
+    font-size: 1rem;
+    color: black;
+    font-weight: 500;
+    font-family: 'Calibri';
+}
+
+.user_update_done_buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 470px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.user_update_done_buttons button 
+{
+    width: 120px;
+    height: 35px;
+    background-color: #505050;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s linear;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Calibri';
+}
+
+.user_update_done_buttons button:hover
+{
+    background-color: transparent;
+    border: 1px solid #505050;
+    color: #505050;
+}
+
+
+.related_video_section
+{
+    height: 400px;
+    overflow-y: scroll;
+    flex-basis: 40%;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.related_video_topic
+{
+    font-size: 1rem;
+}
+
+

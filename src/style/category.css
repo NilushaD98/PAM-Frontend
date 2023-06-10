@@ -1,0 +1,181 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.category_main_container
+{
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+
+
+.category_Aquatics_container, .category_Athletics_container,.category_indoor_container,.category_outdoor_container, .category_beach_container
+{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.aquatics_details_cntainer, .athletics_details_cntainer, .indoor_details_cntainer, .outdoor_details_cntainer, .beach_details_cntainer
+{
+    position: absolute;
+    top: 110px;
+    left: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.category_main_container h1 
+{
+    color: #fff;
+    font-size: 1.55rem;
+    font-family: 'Calibri';
+    letter-spacing: 3px;
+    margin-bottom: -5px;
+    height: 70px;
+}
+
+.category_main_container h6 
+{
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 8px;
+    height: 40px;
+}
+
+.category_main_container p 
+{
+    max-width: 650px;
+    color: #fff;
+    font-size: 0.70rem;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    margin-bottom: 80px;
+    max-height: 200px;
+}
+
+.category_main_container button 
+{
+    width: 110px;
+    height: 35px;
+    border: 1px solid #ECAA00;
+    border-radius: 5px;
+    background-color: #ffb70000;
+    color: #ffffff;
+    font-family: 'Calibri';
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.2s linear;
+}
+
+.category_main_container button:hover 
+{
+    background-color: #eca900c4;
+    border: 1px solid #ECAA00;
+}
+/* ============================================== */
+/* ==============Aquatics container============== */
+/* ============================================== */  
+.category_Aquatics_container
+{
+    background-image: url('../media/male-swimmer-swimming-butterfly-stroke.jpg');
+    position: relative;
+}
+
+
+.linier_div_one
+{
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    background:rgba(0, 0, 26, 0.7);
+}
+
+/* ============================================== */
+/* ==============Athletic container============== */
+/* ============================================== */
+
+.category_Athletics_container
+{
+    background-image: url('../media/athlete-starting-line-stadium.jpg');
+    position: relative;
+    background-position: center;
+}
+
+.category_main_container .linier_div_two
+{
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    background:rgba(1, 39, 54, 0.7);
+}
+
+
+/* ============================================== */
+/* ==============Indoor container============== */
+/* ============================================== */
+.category_indoor_container
+{
+    background-image: url('../media/full-length-portrait-basketball-player-with-ball.jpg');
+    position: relative;
+    background-position: center;
+}
+
+.category_main_container .linier_div_three
+{
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    background:rgba(54, 40, 1, 0.7);
+}
+
+/* ============================================== */
+/* ==============Outdoor container============== */
+/* ============================================== */
+.category_outdoor_container
+{
+    background-image: url('../media/side-view-man-playing-golf-field-with-club.jpg');
+    position: relative;
+    background-position: center;
+}
+
+.category_main_container .linier_div_four
+{
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    background:rgba(1, 54, 10, 0.7);
+}
+
+
+/* ============================================== */
+/* ==============Beach container============== */
+/* ============================================== */
+.category_beach_container
+{
+    background-image: url('../media/female-volleyball-player-beach-serving-ball.jpg');
+    position: relative;
+    background-position: center;
+}
+
+.category_main_container .linier_div_five
+{
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    background:rgba(78, 22, 0, 0.7);
+}

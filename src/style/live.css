@@ -1,0 +1,42 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.Live_main_container
+{
+    position: absolute;
+    top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.live_title_container h1 
+{
+    font-family: 'Calibri';
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+
+.live_video_container 
+{
+   display: flex;
+   align-items: center;
+   justify-content:flex-start;
+   flex-wrap: wrap;
+   margin: 10px 40px;
+   gap: 15px;
+}
+
+.admin_live_video_container
+{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    margin: 10px 40px;
+}
