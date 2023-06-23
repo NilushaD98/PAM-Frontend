@@ -3,7 +3,7 @@ import useAuthContext from "../hooks/useAuthContext";
 import {Table,TableBody,TableCell,TableContainer,TableHead,TableRow,Paper,Button,} from '@mui/material';
 import '../style/userdetails.css'
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
@@ -102,6 +102,11 @@ function UserDetailsTable() {
         
         <div className="user_detail_table_div">
             <TableContainer component={Paper}>
+            <Link to="/AddMachine">
+                        <button style={{borderRadius:'10px',fontSize:'20px',alignItems:'center',marginTop:'10px',marginLeft:'20px',marginBottom:'10px',background: '#333', color: '#fff', border: 'none', padding: '8px 10px', cursor: 'pointer'}} >
+                        Add Machine +
+                        </button>
+                </Link>
                 <Table sx={{ minWidth: 650 }} aria-label="user table">
                     <TableHead>
                     <TableRow className='table_row_user_table'>

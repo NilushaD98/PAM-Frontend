@@ -109,7 +109,11 @@ function UserDetailsTable() {
 
   return (
     <div className="main_user_table_container">
-        
+        <div className="user_update_done_buttons">
+                    <Link to="/AddUser">
+                        <button>Update</button>
+                    </Link>
+                </div>
         <div className="user_detail_table_div">
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="user table">

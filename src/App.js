@@ -4,6 +4,7 @@ import NavigationBar from "./compo/NavigationBar";
 import AddUser from "./Admin pages/AddUser"
 import '../src/style/app.css'
 import LoginPage from './Client page/LoginPage';
+import ChooseMachine from "./Client page/ChooseMachine";
 import AddMachine from './Admin pages/AddMachine'
 import MachineDetails from './Admin pages/MachinesDetails';
 import UserGetDetails from "./Admin pages/UserGetDetails";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/addMachine" element={<AddMachine/>}/>
         <Route path="/machineDetails" element ={<MachineDetails/>}/>
         <Route path="/userGetDetails" element ={<UserGetDetails/>}/>
+        <Route path="/chooseMachine" element ={<ChooseMachine/>}/>
       </Routes>
     </div>
   );

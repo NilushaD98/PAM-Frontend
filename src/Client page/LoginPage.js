@@ -17,46 +17,8 @@ import Swal from 'sweetalert2';
 
 function LoginPage() {
 
-const[usernames,setUserNames] =useState([]);
-const[machineNames,setMachineNames]= useState([]);
-const [selectedUserOption, setSelectedUserOption] = useState('');
-const [selectedMAchineOption, setSelectedMachineOption] = useState('');
-
-
-const getUsersNameAndMachineNames = () =>{
-    fetch(
-        'http://localhost:8083/api/v1/users/getAllMachinesname',
-        {
-            method:'GET',
-            header:{'Accept': 'application/json','Content-Type':'application/json'}
-        }
-    ).then(response =>{
-        response.json().then(data =>{
-            setMachineNames(data.data)
-        })
-    }).catch(error =>console.log(error))
-fetch(
-'http://localhost:8083/api/v1/users/getAllUserNames',
-{
-method:'GET',
-header:{'Accept': 'application/json','Content-Type':'application/json'}
-}
-).then(resp =>{
-console.log(resp);
-resp.json().then(data =>{
-    setUserNames(data.data);
-    console.log(data.data);
-}
-    
-    )
-}).catch(error =>console.log(error))
-}
-
-
 const [username, setUserName] = useState('');
 const [password, setPassword] = useState('');
-const [machineName,setMachineName]= useState('');
-const [nic,setNic]=useState('')
 
 const [IsLogging, setLoggingUser] = useState(false);
 
@@ -64,7 +26,7 @@ const {dispatch} = useAuthContext();
 const navigate = useNavigate();
 const authenticationUser = () =>
 {
-    console.log(username,password,machineName,nic);
+    
     fetch('http://localhost:8083/api/v1/auth/authenticate',
         {
             method :'POST',
@@ -78,36 +40,32 @@ const authenticationUser = () =>
                 {
                     "username":username,
                     "password":password,
-                    "nic":nic,
-                    "machineName":machineName
                 }
             )
         }
     )
     .then(resp => {
-        console.log(resp);
+        
         if(resp.ok){
             resp.json().then(data => {
                 if(data.redirect_status ==="0"){
-                    console.log("user");
                     const authData = {
-                        jwt:data.access_token
+                        jwt:data.access_token,
+                        redirect_status:0
                         }
                         localStorage.setItem('Token1', JSON.stringify(authData));
                     dispatch({
                         type: 'LOGIN_SUCCESS',
                         payload: authData
-                    })
-                    // private String redirect_status;
-                    // private String access_token;
-                    // private String machineIP;
-                    // private String machineUsername;
-                    // private String machinePassword;
-                    // private String oSystem;
+                        
+                    }
+                    )
+                    navigate('/chooseMachine');
                 }else if(data.redirect_status ==="1"){
-                    navigate('/homepage');
+                    navigate('/userGetDetails');
                     const authData = {
-                        jwt:data.access_token
+                        jwt:data.access_token,
+                        redirect_status:1
                         }
                         localStorage.setItem('Token1', JSON.stringify(authData));
                     dispatch({
@@ -120,7 +78,7 @@ const authenticationUser = () =>
                     Swal.fire({
                     icon: 'success',
                     title: 'Successful !',
-                    text: data.username+' Login Successfully !',
+                    text: ' Login Successfully !',
                     customClass: {
                     confirmButton: 'my-button-class'
                     },
@@ -154,7 +112,7 @@ e.preventDefault();
 authenticationUser();
 };
 useEffect(() => {
-    getUsersNameAndMachineNames();
+
 }, []);
 
 return (
@@ -183,34 +141,13 @@ onSubmit={handleClickUsername}
         <tr>
             <td><label>username : </label></td>
             <td>
-                <select onChange={e =>setUserName(e.target.value)}>
-                {usernames.map(item => (
-                <option  key={Math.random()}>
-                {item.username}
-                </option>
-                ))}
-                </select>
+            <input type="text" onChange={e =>setUserName(e.target.value)}></input>
+            
             </td>
         </tr>
         <tr>
             <td><label>password : </label></td>
             <td><input type="password" onChange={e =>setPassword(e.target.value)}></input></td>
-        </tr>
-        <tr>
-            <td><label>nic : </label></td>
-            <td><input type="text" onChange={e =>setNic(e.target.value)}></input></td>
-        </tr>
-        <tr>
-            <td><label>machine name : </label></td>
-            <td>
-            <select onChange={e =>setMachineName(e.target.value)}>
-            {machineNames.map(item => (
-            <option key={Math.random()}>
-            {item.machineName}
-            </option>
-            ))}
-            </select>
-            </td>
         </tr>
     </table>
 

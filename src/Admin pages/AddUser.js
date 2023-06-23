@@ -50,7 +50,7 @@ const addUser = () =>
         }
     )
     .then(resp => {
-        console.log(resp);
+        
         if(resp.status === 201){
             resp.json().then(data => {
                     Swal.fire({
@@ -143,7 +143,7 @@ onSubmit={handleClickUsername}
 </FormControl>
 </div>
 <div className = 'login_button_div'>
-<button  className = 'login_button'type='submit'>Sing up</button>
+<button  className = 'login_button'type='submit'>Add User</button>
 </div>
 
 </Box>

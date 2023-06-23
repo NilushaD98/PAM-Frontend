@@ -50,7 +50,7 @@ const addUser = () =>
         }
     )
     .then(resp => {
-        console.log(resp);
+        
         if(resp.status === 201){
             resp.json().then(data => {
                     Swal.fire({
@@ -93,7 +93,7 @@ sx={{width:'320px'}}
 >
 <CardContent className='title_container'>
 <Typography className='title_container_text' gutterBottom variant="h4" component="div">
-Add User
+Add Machine
 </Typography>
 </CardContent>
 <CardContent className='input_feilds'>
@@ -144,7 +144,7 @@ onSubmit={handleClickUsername}
 </FormControl>
 </div>
 <div className = 'login_button_div'>
-<button  className = 'login_button'type='submit'>Sing up</button>
+<button  className = 'login_button'type='submit'>Add Machine</button>
 </div>
 
 </Box>

@@ -3,7 +3,7 @@ import useAuthContext from "../hooks/useAuthContext";
 import {Table,TableBody,TableCell,TableContainer,TableHead,TableRow,Paper,Button,} from '@mui/material';
 import '../style/userdetails.css'
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
@@ -101,9 +101,17 @@ function UserDetailsTable() {
   return (
     <div className="main_user_table_container">
         
+        
         <div className="user_detail_table_div">
             <TableContainer component={Paper}>
+                <Link to="/AddUser">
+                        <button style={{borderRadius:'10px',fontSize:'20px',alignItems:'center',marginTop:'10px',marginLeft:'20px',marginBottom:'10px',background: '#333', color: '#fff', border: 'none', padding: '8px 10px', cursor: 'pointer'}} >
+                        Add User +
+                        </button>
+                </Link>
+            
                 <Table sx={{ minWidth: 650 }} aria-label="user table">
+                
                     <TableHead>
                     <TableRow className='table_row_user_table'>
                         <TableCell sx={{color: '#fff'}}>User ID</TableCell>
@@ -113,6 +121,10 @@ function UserDetailsTable() {
                         <TableCell sx={{color: '#fff'}}>DELETE</TableCell>
                     </TableRow>
                     </TableHead>
+                    <TableRow>
+                        
+                    </TableRow>
+                    
                     <TableBody>
                     {tableData.map((row) => (
                         <TableRow key={row.userID}>
