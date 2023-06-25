@@ -21,7 +21,13 @@ const [username, setUserName] = useState('');
 const [password, setPassword] = useState('');
 const [email,setEmail]= useState('')
 const [role,setRole]=useState('');
-const [nic,setNic]=useState('')
+const [nic,setNic]=useState('');
+
+const [selectedRole, setSelectedRole] = useState('');
+
+const handleRoleChange = (e) => {
+    setSelectedRole(e.target.value);
+  };
 
 const {dispatch} = useAuthContext();
 const navigate = useNavigate();
@@ -43,7 +49,7 @@ const addUser = () =>
                     "username":username,
                     "password":password,
                     "email":email,
-                    "role":role,
+                    "role":selectedRole,
                     "nic":nic
                 }
             )
@@ -63,6 +69,7 @@ const addUser = () =>
                     buttonsStyling: false
                     });
                     });
+                    navigate('/userGetDetails');
         }else{
             Swal.fire({
             icon: 'error',
@@ -108,31 +115,113 @@ onSubmit={handleClickUsername}
 >
     <table>
         <tr>
-            <td><label>username : </label></td>
             <td>
-            <td><input type="username" onChange={e =>setUserName(e.target.value)}></input></td>
+                <input
+                type="text"
+                placeholder="Username"
+                onChange={e => setUserName(e.target.value)}
+                style={{
+                    display:'flex',
+                    justifyContent:'center',
+                    width:'250px',
+                    height:'30px',
+                    textAlign:'center',
+                    fontSize:'15px',
+                    borderRadius:'10px',
+                    borderWidth:'3px',
+                    borderColor:'darkred',
+                    '::placeholder': { color: 'red' },
+                }}
+                />
             </td>
         </tr>
         <tr>
-            <td><label>password : </label></td>
-            <td><input type="password" onChange={e =>setPassword(e.target.value)}></input></td>
-        </tr>
-        <tr>
-            <td><label>email : </label></td>
-            <td><input type="email" onChange={e =>setEmail(e.target.value)}></input></td>
-        </tr>
-        <tr>
-            <td><label>role : </label></td>
             <td>
-                <select onChange={e =>setRole(e.target.value)}>
+                <input
+                type="text"
+                placeholder="Password"
+                onChange={e => setPassword(e.target.value)}
+                style={{
+                    display:'flex',
+                    justifyContent:'center',
+                    width:'250px',
+                    height:'30px',
+                    textAlign:'center',
+                    fontSize:'15px',
+                    borderRadius:'10px',
+                    borderWidth:'3px',
+                    borderColor:'darkred',
+                    '::placeholder': { color: 'red' },
+                }}
+                />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input
+                type="text"
+                placeholder="E-mail"
+                onChange={e => setEmail(e.target.value)}
+                style={{
+                    display:'flex',
+                    justifyContent:'center',
+                    width:'250px',
+                    height:'30px',
+                    textAlign:'center',
+                    fontSize:'15px',
+                    borderRadius:'10px',
+                    borderWidth:'3px',
+                    borderColor:'darkred',
+                    '::placeholder': { color: 'red' },
+                }}
+                />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select 
+                    value={selectedRole}
+                    onChange={handleRoleChange}
+                    style={{
+                        display:'flex',
+                        justifyContent:'center',
+                        width:'255px',
+                        height:'35px',
+                        textAlign:'center',
+                        fontSize:'15px',
+                        borderRadius:'10px',
+                        borderWidth:'3px',
+                        borderColor:'darkred',
+                        '::placeholder': { color: 'red' },
+                    }}
+                    
+                    >
+                <option value="" disabled selected hidden>Select Role</option>
                 <option key={Math.random()}>ADMIN</option>
                 <option key={Math.random()}>USER</option>
                 </select>    
             </td>
         </tr>
         <tr>
-            <td><label>nic : </label></td>
-            <td><input type="text" onChange={e =>setNic(e.target.value)}></input></td>
+            <td>
+                <input
+                type="text"
+                placeholder="NIC"
+                onChange={e => setNic(e.target.value)}
+                style={{
+                    display:'flex',
+                    justifyContent:'center',
+                    width:'250px',
+                    height:'30px',
+                    textAlign:'center',
+                    fontSize:'15px',
+                    borderWidth:'3px',
+                    borderRadius:'10px',
+                    borderColor:'darkred',
+                    '::placeholder': { color: 'red' },
+                }}
+                />
+            </td>
         </tr>
     </table>
 

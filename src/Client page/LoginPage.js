@@ -96,6 +96,7 @@ const authenticationUser = () =>
                 icon: 'error',
                 title: 'Error',
                 text: 'Nic wrong!!',
+            
                 });
         }
         return IsLogging;
@@ -116,7 +117,7 @@ useEffect(() => {
 }, []);
 
 return (
-<div className='login_main_container'>
+<div className='login_main_container' style={{backgroundImage:'url(../media/PAMLOGO.png)'}}>
 
 <div className="login_form_container" >
 <Card
@@ -139,15 +140,48 @@ onSubmit={handleClickUsername}
 >
     <table>
         <tr>
-            <td><label>username : </label></td>
+        
+        </tr>
+        <tr>
             <td>
-            <input type="text" onChange={e =>setUserName(e.target.value)}></input>
-            
+            <input
+                type="text"
+                placeholder="Username"
+                onChange={e => setUserName(e.target.value)}
+                style={{
+                    display:'flex',
+                    justifyContent:'center',
+                    width:'250px',
+                    height:'30px',
+                    textAlign:'center',
+                    fontSize:'15px',
+                    borderRadius:'10px',
+                    borderColor:'darkred',
+                    '::placeholder': { color: 'red' },
+                }}
+                />
             </td>
         </tr>
         <tr>
-            <td><label>password : </label></td>
-            <td><input type="password" onChange={e =>setPassword(e.target.value)}></input></td>
+            <td>
+                <input
+                    type="password"
+                    placeholder="Password"
+                    onChange={e => setPassword(e.target.value)}
+                    style={{
+                        display:'flex',
+                        justifyContent:'center',
+                        width:'250px',
+                        height:'30px',
+                        marginTop:'10px',
+                        fontSize:'15px',
+                        textAlign:'center',
+                        borderRadius:'10px',
+                        borderColor:'darkred',
+                        '::placeholder': { color: 'red' },
+                    }}
+                    />
+            </td>
         </tr>
     </table>
 

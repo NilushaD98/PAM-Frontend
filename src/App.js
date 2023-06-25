@@ -1,5 +1,4 @@
 import React from "react";
-import HomePage from "./Client page/HomePage";
 import NavigationBar from "./compo/NavigationBar";
 import AddUser from "./Admin pages/AddUser"
 import '../src/style/app.css'

@@ -69,7 +69,7 @@ function UserDetailsTable() {
                             title: 'Successful !',
                             text: id+' Successfully Deleted!',
                             customClass: {
-                                confirmButton: 'my-button-class'
+                                confirmButton: 'c'
                               },
                               buttonsStyling: false
                           });
@@ -105,8 +105,8 @@ function UserDetailsTable() {
         <div className="user_detail_table_div">
             <TableContainer component={Paper}>
                 <Link to="/AddUser">
-                        <button style={{borderRadius:'10px',fontSize:'20px',alignItems:'center',marginTop:'10px',marginLeft:'20px',marginBottom:'10px',background: '#333', color: '#fff', border: 'none', padding: '8px 10px', cursor: 'pointer'}} >
-                        Add User +
+                        <button style={{width:'100px',borderRadius:'10px',fontSize:'15px',alignItems:'center',marginTop:'10px',marginLeft:'20px',marginBottom:'10px',background: 'darkred', color: '#fff', border: 'none', padding: '8px 10px', cursor: 'pointer'}} >
+                        Add User 
                         </button>
                 </Link>
             

@@ -22,7 +22,7 @@ export default function NavigationBar() {
     <div className='nav_main_container'>
         <div className="navigation_container">
             <div className="logo_container">
-               
+            <Link to='/user'><div className="logo"></div></Link>
             </div>
 
             <div className="link_container">

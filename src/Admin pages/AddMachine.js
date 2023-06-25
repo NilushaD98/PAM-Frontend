@@ -22,6 +22,11 @@ const [username, setUsername] = useState('');
 const [password, setPassword] = useState('');
 const [machineOS,setMachineOS]= useState('')
 
+const [selectedOS, setSelectedOS] = useState('');
+
+const handleOSChange = (e) => {
+    setSelectedOS(e.target.value);
+  };
 
 const {dispatch} = useAuthContext();
 const navigate = useNavigate();
@@ -44,7 +49,7 @@ const addUser = () =>
                     "machineName":machineName,
                     "username":username,
                     "password":password,
-                    "machineOS":machineOS
+                    "machineOS":selectedOS
                 }
             )
         }
@@ -63,6 +68,7 @@ const addUser = () =>
                     buttonsStyling: false
                     });
                     });
+                    navigate('/machineDetails');
         }else{
             Swal.fire({
             icon: 'error',
@@ -108,27 +114,104 @@ onSubmit={handleClickUsername}
 >
     <table>
         <tr>
-            <td><label>machineIP : </label></td>
+                <td>
+                <input
+                type="text"
+                placeholder="Machine IP"
+                onChange={e => setmachineIP(e.target.value)}
+                style={{
+                    display:'flex',
+                    justifyContent:'center',
+                    width:'250px',
+                    height:'30px',
+                    textAlign:'center',
+                    fontSize:'15px',
+                    borderRadius:'10px',
+                    borderColor:'darkred',
+                    '::placeholder': { color: 'red' },
+                }}
+                />
+                </td>
+        </tr>
+        <tr>
             <td>
-            <td><input type="text" onChange={e =>setmachineIP(e.target.value)}></input></td>
+                <input
+                type="text"
+                placeholder="Machinename"
+                onChange={e => setmachineName(e.target.value)}
+                style={{
+                    display:'flex',
+                    justifyContent:'center',
+                    width:'250px',
+                    height:'30px',
+                    textAlign:'center',
+                    fontSize:'15px',
+                    borderRadius:'10px',
+                    borderColor:'darkred',
+                    '::placeholder': { color: 'red' },
+                }}
+                />
             </td>
         </tr>
         <tr>
-            <td><label>machineName : </label></td>
-            <td><input type="text" onChange={e =>setmachineName(e.target.value)}></input></td>
-        </tr>
-        <tr>
-            <td><label>username : </label></td>
-            <td><input type="text" onChange={e =>setUsername(e.target.value)}></input></td>
-        </tr>
-        <tr>
-            <td><label>password : </label></td>
-            <td><input type="password" onChange={e =>setPassword(e.target.value)}></input></td>
-        </tr>
-        <tr>
-            <td><label>machineOS : </label></td>
             <td>
-                <select onChange={e =>setMachineOS(e.target.value)}>
+                <input
+                type="text"
+                placeholder="Machine's Username"
+                onChange={e => setUsername(e.target.value)}
+                style={{
+                    display:'flex',
+                    justifyContent:'center',
+                    width:'250px',
+                    height:'30px',
+                    textAlign:'center',
+                    fontSize:'15px',
+                    borderRadius:'10px',
+                    borderColor:'darkred',
+                    '::placeholder': { color: 'red' },
+                }}
+                />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input
+                type="text"
+                placeholder="Machine's Password"
+                onChange={e => setPassword(e.target.value)}
+                style={{
+                    display:'flex',
+                    justifyContent:'center',
+                    width:'250px',
+                    height:'30px',
+                    textAlign:'center',
+                    fontSize:'15px',
+                    borderRadius:'10px',
+                    borderColor:'darkred',
+                    '::placeholder': { color: 'red' },
+                }}
+                />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select
+                    value={selectedOS}
+                    onChange={handleOSChange} 
+                    style={{
+                        display:'flex',
+                        justifyContent:'center',
+                        width:'255px',
+                        height:'35px',
+                        textAlign:'center',
+                        fontSize:'15px',
+                        borderRadius:'10px',
+                        borderWidth:'3px',
+                        borderColor:'darkred',
+                        '::placeholder': { color: 'red' },
+                    }}
+                >
+                <option value="" disabled selected hidden>Operating System</option>
                 <option key={Math.random()}>Linux</option>
                 <option key={Math.random()}>Windows</option>
                 <option key={Math.random()}>macOS</option>

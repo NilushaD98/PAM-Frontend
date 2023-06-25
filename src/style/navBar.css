@@ -8,7 +8,7 @@
 {
     width: 100%;
     height: 70px;
-    background-image: linear-gradient(140deg,rgba(22, 22, 22, 0.88) ,rgba(95, 95, 95, 0.88));
+    background-image: linear-gradient(150deg,#f0afaf ,#7c0101);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +21,7 @@
 }
 .logo_container .logo
 {
-    background-image: url(../media/olympic-games.png);
+    background-image: url(../media/PAMLOGO.png);
     width: 100px;
     height: 80px;
     background-size: cover;
@@ -58,7 +58,7 @@
 .link_container ul li a, .link_container ul li button
 {
     text-decoration: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 1.03rem;
     font-weight: 600;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
@@ -73,8 +73,8 @@
     left: 0;
     position: absolute;
     height: 3px;
-    background: #fd6f2e;
-    width: 0;
+    background: #ffffff;
+    width: 0px;
     transition: 0.4s linear;
 }
 

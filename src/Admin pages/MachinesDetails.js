@@ -103,8 +103,8 @@ function UserDetailsTable() {
         <div className="user_detail_table_div">
             <TableContainer component={Paper}>
             <Link to="/AddMachine">
-                        <button style={{borderRadius:'10px',fontSize:'20px',alignItems:'center',marginTop:'10px',marginLeft:'20px',marginBottom:'10px',background: '#333', color: '#fff', border: 'none', padding: '8px 10px', cursor: 'pointer'}} >
-                        Add Machine +
+                        <button style={{width:'150px',borderRadius:'10px',fontSize:'15px',alignItems:'center',marginTop:'10px',marginLeft:'20px',marginBottom:'10px',background: 'darkred', color: '#fff', border: 'none', padding: '8px 10px', cursor: 'pointer'}} >
+                        Add Machine
                         </button>
                 </Link>
                 <Table sx={{ minWidth: 650 }} aria-label="user table">

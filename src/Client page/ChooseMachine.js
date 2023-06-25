@@ -103,7 +103,19 @@ onSubmit={handleClickUsername}
         <table>
             <tr>
                 <td>
-                <select style={{fontSize:'20px', width:'250px',height:'30px'}}
+                <select 
+                    style={{
+                        display:'flex',
+                        justifyContent:'center',
+                        width:'255px',
+                        height:'35px',
+                        textAlign:'center',
+                        fontSize:'15px',
+                        borderRadius:'10px',
+                        borderWidth:'3px',
+                        borderColor:'darkred',
+                        '::placeholder': { color: 'red' },
+                    }}
                     value={selectedMachine}
                     onChange={handleMachineChange}
                 >
